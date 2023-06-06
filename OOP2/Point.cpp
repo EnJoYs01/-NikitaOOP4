@@ -3,8 +3,10 @@
 
 extern HDC hdc;
 
-Point::Point(int X, int Y, COLORREF color) : Figure(X, Y){
+Point::Point(int X, int Y, COLORREF color) {
 	this->setColor(color);
+	this->setX(X);
+	this->setY(Y);
 }
 
 void Point::setColor(COLORREF color) {

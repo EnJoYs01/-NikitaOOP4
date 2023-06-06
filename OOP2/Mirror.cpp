@@ -2,6 +2,7 @@
 #include "Mirror.h"
 
 extern HDC hdc;
+extern HWND hwnd;
 
 Mirror::Mirror(int X, int Y) : Point(X, Y) {}
 
@@ -10,6 +11,7 @@ void Mirror::Show() {
 	HPEN pen = CreatePen(PS_SOLID, 1, this->getColor());
 	SelectObject(hdc, pen);
 	Ellipse(hdc, this->getX(), this->getY(), this->getX() + 9, this->getY() + 20);
+
 	DeleteObject(pen);
 }
 

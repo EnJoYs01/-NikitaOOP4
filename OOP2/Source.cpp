@@ -29,8 +29,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 				rand() % ((Flashlights[1]->getY() + Flashlights[1]->GetWidth() / 2 + 15) - (Flashlights[1]->getY() - Flashlights[1]->GetWidth() / 2) + 1);
 
 			if (Photons[i]->getSourse() == 1 || Photons[i]->getSourse() == 2) {
-				if ((Photons[i]->getY() >= Flashlights[0]->getY() + 50 || Photons[i]->getX() <= Flashlights[0]->getX() - 70 
-				|| Photons[i]->getY() <= Flashlights[0]->getY() - 100)) {
+				if ((Photons[i]->getY() >= Flashlights[0]->getY() + 50 || Photons[i]->getX() <= Flashlights[0]->getX() - 70
+					|| Photons[i]->getY() <= Flashlights[0]->getY() - 100)) {
 					Photons[i]->setTrajectory(0);
 					Photons[i]->MoveTo(Flashlights[0]->getX() - 7, switchableY);
 				}
@@ -38,8 +38,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 					Photons[i]->setTrajectory(0);
 					Photons[i]->MoveTo(Flashlights[0]->getX() - 7, switchableY);
 				}
-				else if (Photons[i]->getX() <= Flashlights[0]->getX() - 40 && Photons[i]->getY() >= Flashlights[0]->getY() - 15 
-				&& Photons[i]->getY() <= Flashlights[0]->getY() && !Photons[i]->isUsed()) {
+				else if (Photons[i]->getX() <= Flashlights[0]->getX() - 40 && Photons[i]->getY() >= Flashlights[0]->getY() - 15
+					&& Photons[i]->getY() <= Flashlights[0]->getY() && !Photons[i]->isUsed()) {
 					int value = rand() % 2;
 					if (value == 0) {
 						Photons[i]->setTrajectory(1);
@@ -48,14 +48,14 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 						Photons[i]->setTrajectory(2);
 					}
 				}
-				else if (Photons[i]->getX() <=Flashlights[0]->getX() - 44 && Photons[i]->getX() >= Flashlights[0]->getX() - 47 
-				&& Photons[i]->getY() >= Flashlights[0]->getY() + 10 && Photons[i]->getY() <= Flashlights[0]->getY() + 30) {
+				else if (Photons[i]->getX() <= Flashlights[0]->getX() - 44 && Photons[i]->getX() >= Flashlights[0]->getX() - 47
+					&& Photons[i]->getY() >= Flashlights[0]->getY() + 10 && Photons[i]->getY() <= Flashlights[0]->getY() + 30) {
 					Photons[i]->setTrajectory(3);
-				}			
+				}
 			}
 			else {
-				if ((Photons[i]->getY() >= Flashlights[1]->getY() + 100 || Photons[i]->getX() >= Flashlights[1]->getX() + 30 + 7 + 70 
-				|| Photons[i]->getY() <= Flashlights[1]->getY() - 50)) {
+				if ((Photons[i]->getY() >= Flashlights[1]->getY() + 100 || Photons[i]->getX() >= Flashlights[1]->getX() + 30 + 7 + 70
+					|| Photons[i]->getY() <= Flashlights[1]->getY() - 50)) {
 					Photons[i]->setTrajectory(0);
 					Photons[i]->MoveTo(Flashlights[1]->getX() + 30 + 7, ledY);
 				}
@@ -64,7 +64,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 					Photons[i]->MoveTo(Flashlights[1]->getX() + 30 + 7, ledY);
 				}
 				else if (Photons[i]->getX() >= Flashlights[0]->getX() - 60 && Photons[i]->getY() >= Flashlights[0]->getY() - 15
-				&& Photons[i]->getY() <= Flashlights[0]->getY() && !Photons[i]->isUsed()) {
+					&& Photons[i]->getY() <= Flashlights[0]->getY() && !Photons[i]->isUsed()) {
 					int value = rand() % 2;
 					if (value == 0) {
 						Photons[i]->setTrajectory(1);
@@ -73,8 +73,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 						Photons[i]->setTrajectory(2);
 					}
 				}
-				else if (Photons[i]->getX() >= Flashlights[0]->getX() - 53 && Photons[i]->getX() <= Flashlights[0]->getX() - 50 
-				&& Photons[i]->getY() >= Flashlights[0]->getY() + 10 && Photons[i]->getY() <= Flashlights[0]->getY() + 30) {
+				else if (Photons[i]->getX() >= Flashlights[0]->getX() - 53 && Photons[i]->getX() <= Flashlights[0]->getX() - 50
+					&& Photons[i]->getY() >= Flashlights[0]->getY() + 10 && Photons[i]->getY() <= Flashlights[0]->getY() + 30) {
 					Photons[i]->setTrajectory(3);
 				}
 			}
@@ -98,36 +98,36 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		}
 
 		int maxLedPhotons = Flashlights[1]->getBrightness();
-			for (int i = 0; i < MAX_SWITCHABLE_PHOTONS + maxLedPhotons; i++) {
-				if (Photons[i]->getSourse() == 1 || Photons[i]->getSourse() == 2) {			
-					if (Photons[i]->getTrajectory() == 1) {
-						Photons[i]->MoveTo(Photons[i]->getX() - Photons[i]->getSpeed(), Photons[i]->getY() - Photons[i]->getSpeed());
-					}
-					else if (Photons[i]->getTrajectory() == 2) {
-						Photons[i]->MoveTo(Photons[i]->getX() - Photons[i]->getSpeed(), Photons[i]->getY() + Photons[i]->getSpeed());
-					}
-					else if (Photons[i]->getTrajectory() == 3) {
-						Photons[i]->MoveTo(Photons[i]->getX() + Photons[i]->getSpeed(), Photons[i]->getY());
-					}
-					else{
-						Photons[i]->MoveTo(Photons[i]->getX() - Photons[i]->getSpeed(), Photons[i]->getY());
-					}
+		for (int i = 0; i < MAX_SWITCHABLE_PHOTONS + maxLedPhotons; i++) {
+			if (Photons[i]->getSourse() == 1 || Photons[i]->getSourse() == 2) {
+				if (Photons[i]->getTrajectory() == 1) {
+					Photons[i]->MoveTo(Photons[i]->getX() - Photons[i]->getSpeed(), Photons[i]->getY() - Photons[i]->getSpeed());
+				}
+				else if (Photons[i]->getTrajectory() == 2) {
+					Photons[i]->MoveTo(Photons[i]->getX() - Photons[i]->getSpeed(), Photons[i]->getY() + Photons[i]->getSpeed());
+				}
+				else if (Photons[i]->getTrajectory() == 3) {
+					Photons[i]->MoveTo(Photons[i]->getX() + Photons[i]->getSpeed(), Photons[i]->getY());
 				}
 				else {
-					if (Photons[i]->getTrajectory() == 1) {
-						Photons[i]->MoveTo(Photons[i]->getX() + Photons[i]->getSpeed(), Photons[i]->getY() - Photons[i]->getSpeed());
-					}
-					else if (Photons[i]->getTrajectory() == 2) {
-						Photons[i]->MoveTo(Photons[i]->getX() + Photons[i]->getSpeed(), Photons[i]->getY() + Photons[i]->getSpeed());
-					}
-					else if (Photons[i]->getTrajectory() == 3) {
-						Photons[i]->MoveTo(Photons[i]->getX() - Photons[i]->getSpeed(), Photons[i]->getY());
-					}
-					else {
-						Photons[i]->MoveTo(Photons[i]->getX() + Photons[i]->getSpeed(), Photons[i]->getY());
-					}
+					Photons[i]->MoveTo(Photons[i]->getX() - Photons[i]->getSpeed(), Photons[i]->getY());
 				}
 			}
+			else {
+				if (Photons[i]->getTrajectory() == 1) {
+					Photons[i]->MoveTo(Photons[i]->getX() + Photons[i]->getSpeed(), Photons[i]->getY() - Photons[i]->getSpeed());
+				}
+				else if (Photons[i]->getTrajectory() == 2) {
+					Photons[i]->MoveTo(Photons[i]->getX() + Photons[i]->getSpeed(), Photons[i]->getY() + Photons[i]->getSpeed());
+				}
+				else if (Photons[i]->getTrajectory() == 3) {
+					Photons[i]->MoveTo(Photons[i]->getX() - Photons[i]->getSpeed(), Photons[i]->getY());
+				}
+				else {
+					Photons[i]->MoveTo(Photons[i]->getX() + Photons[i]->getSpeed(), Photons[i]->getY());
+				}
+			}
+		}
 
 		EndPaint(hwnd, &ps);
 		break;
@@ -174,7 +174,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR czCmdLine, int nCmdSho
 
 	for (int i = MAX_SWITCHABLE_PHOTONS; i < MAX_SWITCHABLE_PHOTONS + maxLedPhotons; i++) {
 		y = Flashlights[1]->getY() - Flashlights[1]->GetWidth() / 2 +
-			rand() % ((Flashlights[1]->getY() + Flashlights[1]->GetWidth() / 2 + 15) - (Flashlights[1]->getY() - Flashlights[1]->GetWidth() / 2) + 1);		
+			rand() % ((Flashlights[1]->getY() + Flashlights[1]->GetWidth() / 2 + 15) - (Flashlights[1]->getY() - Flashlights[1]->GetWidth() / 2) + 1);
 		Photons.push_back(new LedPhoton(Flashlights[1]->getX() + 30 + 7, y, 0, rand() % 3 + 1));
 	}
 

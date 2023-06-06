@@ -7,15 +7,8 @@
       <FileName>Point.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Figure" Collapsed="true">
-    <Position X="5.75" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAGAAAAAAAAEAAAAABgAGAAAAA=</HashCode>
-      <FileName>Figure.h</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Photon" Collapsed="true">
-    <Position X="3.25" Y="2.5" Width="1.5" />
+    <Position X="3.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACCAEAAAIAAAggIcAQABAAAAQAQAAAA=</HashCode>
       <FileName>Photon.h</FileName>
@@ -36,23 +29,23 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Mirror" Collapsed="true">
-    <Position X="11.25" Y="2.5" Width="1.5" />
+    <Position X="11.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAgAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Mirror.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Prism" Collapsed="true">
-    <Position X="1" Y="2.5" Width="1.5" />
+    <Position X="1" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Prism.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Flashlight" Collapsed="true">
-    <Position X="8.25" Y="2.5" Width="1.5" />
+    <Position X="8.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAEAAAAAAAAAAUAAAAAAAAAAEAAAAAAAgAEAAQAQ=</HashCode>
+      <HashCode>AAAEgEAAAAAAAAAAUAAAAAAAAAAECIAAAAAgAEAAQAQ=</HashCode>
       <FileName>Flashlight.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -68,6 +61,20 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAEAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SwitchableFlashlight.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ABSFigure" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAGAAAAAAAEAAAAAABgAGAAAAA=</HashCode>
+      <FileName>ABSFigure.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMove" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMove.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
